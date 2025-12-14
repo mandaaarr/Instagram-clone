@@ -8,8 +8,8 @@ app.use(express.json());
 app.use(cors());
 app.use('/api/auth', authRoute);
 
-// DIRECT CONNECTION STRING (No .env needed for now)
-const MONGO_URI = "mongodb+srv://admin:Mk216181@cluster0.9dzep1i.mongodb.net/?appName=Cluster0";
+// DIRECT CONNECTION STRING 
+const MONGO_URI = "mongodb+srv://admin:<password>@cluster0.9dzep1i.mongodb.net/?appName=Cluster0";
 mongoose.connect(MONGO_URI, { family: 4 })
   .then(() => console.log("✅ MongoDB Connected Successfully"))
   .catch(err => {
